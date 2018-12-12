@@ -6,7 +6,9 @@ This template includes tests using [Molecule], [Ansible Lint], and [YAML Lint] t
 
 To use this, first install `cookiecutter`, then run `cookiecutter gh:samdoran/cookiecutter-ansible-role` and answer the prompts.
 
-You can also use Molecule to initialize a new role using this template by running `molecule init template --url https://github.com/samdoran/cookiecutter-ansible-role.git`.
+You can also use Molecule to initialize a new role using this template by running `molecule init template --url https://github.com/samdoran/cookiecutter-ansible-role-multi`.
+
+You can also just use Cookiecutter directly: `cookiecutter gh:samdoran/cookiecutter-ansible-role-multi`.
 
 ## Development Workflow ##
 
