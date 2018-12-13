@@ -24,12 +24,12 @@ install:
 before_script:
   # Remove "ansible-role-" prefix from role name
   - cd ../
-  - mv ansible-role-$ROLE_NAME $ROLE_NAME
+  - mv ansible-role-${ROLE_NAME/_/-} $ROLE_NAME
   - cd $ROLE_NAME
 
 script:
   # Run tests
-  - molecule test
+  - molecule test --all
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
