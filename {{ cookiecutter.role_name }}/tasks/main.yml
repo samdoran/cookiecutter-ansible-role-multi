@@ -6,6 +6,6 @@
       - "{{ ansible_facts.distribution }}-{{ ansible_facts.distribution_version }}.yml"
       - "{{ ansible_facts.os_family }}.yml"
       - "{{ ansible_facts.os_distribution }}.yml"
-      - none.yml
+      - default.yml
 
 - include_tasks: "install-{{ ansible_facts.os_family }}.yml"{% endraw %}
