@@ -65,3 +65,4 @@ A special thank you to [Jeff Geerling] for being a trailblazer with Molecule (an
 [several containers]: https://quay.io/user/samdoran
 [Jeff Geerling]: https://www.jeffgeerling.com/blog/2018/testing-your-ansible-roles-molecule
 [ThisOne]: https://github.com/samdoran/cookiecutter-ansible-role
+[linting behavior changed]: https://molecule.readthedocs.io/en/latest/configuration.html#lint
