@@ -2,7 +2,7 @@
 
 This is a [cookiecutter project] for creating [Ansible roles] targeting multiple distributions. If you are looking for a simpler role template, use [this one][ThisOne].
 
-This template includes tests using [Molecule], [Ansible Lint], and [YAML Lint] to work with [Travis CI].
+This includes tests using [Molecule] and [YAML Lint] to work with [Azure Pipelines].
 
 To use this, first install `cookiecutter`, then run `cookiecutter gh:samdoran/cookiecutter-ansible-role` and answer the prompts.
 
@@ -33,23 +33,21 @@ The `molecule.yml` file is setup to accept three environment variables:
 `MOLECULE_PLAYBOOK`: the name of the playbook to run
 
 Valid values for `MOLECULE_DISTRIBUTION` based on how I name my test containers are:
-    - centos6
     - centos7 (the default)
     - centos8
-    - ubuntu14
     - ubuntu16
     - ubuntu18
-    - debian8
+    - ubuntu20
     - debian9
     - debian10
-    - fedora29
     - fedora30
+    - fedora31
 
-For example, to test your role on Debian 9, run `env MOLECULE_DISTRIBUTION=debian9 molecule test`.
+For example, to test your role on Debian 10, run `env MOLECULE_DISTRIBUTION=debian10 molecule test`.
 
-## TravisCI ##
+## Azure Pipelines ##
 
-The included `.travis.yml` file uses a test matrix to test various distributions. It will run `molecule test` on each of the distributions.
+The included `.azure_pipelines.yml` file uses a test matrix to test various distributions. It will run `molecule test --all` on each of the distributions.
 
 
 ## Thanks ##
@@ -61,8 +59,7 @@ A special thank you to [Jeff Geerling] for being a trailblazer with Molecule (an
 [molecule]: https://molecule.readthedocs.io
 [Ansible Lint]: https://docs.ansible.com/ansible-lint/
 [YAML Lint]:https://yamllint.readthedocs.io/en/stable/
-[Travis CI]: https://travis-ci.org
+[Ansible Lint]: https://docs.ansible.com/ansible-lint/
 [several containers]: https://quay.io/user/samdoran
 [Jeff Geerling]: https://www.jeffgeerling.com/blog/2018/testing-your-ansible-roles-molecule
 [ThisOne]: https://github.com/samdoran/cookiecutter-ansible-role
-[linting behavior changed]: https://molecule.readthedocs.io/en/latest/configuration.html#lint
